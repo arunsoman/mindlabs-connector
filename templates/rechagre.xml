@@ -1,0 +1,26 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:adm="http://admin.soap.efill.topup.redknee.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <adm:eFillRecharge>
+         <!--Optional:-->
+         <recipientMsisdn>MSISDN</recipientMsisdn>
+         <!--Optional:-->
+         <recipientSubscriberCode>?</recipientSubscriberCode>
+         <!--Optional:-->
+         <recipientSmsConfirmation>false</recipientSmsConfirmation>
+         <!--Optional:-->
+         <originatorMsisdn>MSISDN</originatorMsisdn>
+         <!--Optional:-->
+         <originatorSubscriberCode>?</originatorSubscriberCode>
+         <!--Optional:-->
+         <originatorSmsConfirmation>False</originatorSmsConfirmation>
+         <!--Optional:-->
+         <productName>EbundleWallet</productName>
+         <!--Optional:-->
+         <rechargeAmount>2500</rechargeAmount>
+         <parentSalespointName>log_abdul_zahir_sp</parentSalespointName>
+         <accountId>ID</accountId>
+<externalTransactionId>65763988</externalTransactionId>
+      </adm:eFillRecharge>
+   </soapenv:Body>
+</soapenv:Envelope>

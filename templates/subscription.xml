@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope
+  xmlns:q0="http://nsn.com/ossbss/charge.once/wsdl/entity/Tis/xsd/1"
+  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:wsa="http://www.w3.org/2005/08/addressing"
+  xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <soapenv:Header>
+    <wsse:Security>
+      <wsse:UsernameToken>
+<wsse:Username>User</wsse:Username>
+  <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Password</wsse:Password>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <q0:CommandRequestData>
+      <q0:Environment>
+        <q0:Parameter name="ApplicationDomain" value="CAO_LDM_00" />
+        <q0:Parameter name="DefaultOperationNamespace" value="GMF" />
+        <q0:Parameter name="TMAFOutputTimezone" value="Local" />
+      </q0:Environment>
+      <q0:Command>
+        <q0:Operation namespace="CA" name="Subscribe" modifier="PackageItem">
+          <q0:ParameterList>
+            <q0:IntParameter name="ChargeMode">1</q0:IntParameter>
+            <q0:StringParameter name="CustomerId">MSISD</q0:StringParameter>
+            <q0:StringParameter name="Package">Bundlename</q0:StringParameter>
+            <q0:StringParameter namespace="@" name="MessageId">test</q0:StringParameter>
+            
+          </q0:ParameterList>
+        </q0:Operation>
+      </q0:Command>
+    </q0:CommandRequestData>
+  </soapenv:Body>
+</soapenv:Envelope>
